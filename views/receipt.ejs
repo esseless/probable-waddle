@@ -1,0 +1,82 @@
+<%- include('_layouts/header'); -%>
+
+<main class="receipt-main">
+    <h5>Thank you for your order!</h5>
+    <div class="uk-overflow-auto">
+        <h3 class="uk-margin-remove-bottom uk-margin-remove-top">Receipt</h3>
+        <table class="uk-table uk-table-middle uk-table-divider 
+                uk-margin-remove-top customer-data">
+            <thead>
+                <tr>
+                    <th class="uk-table-shrink">Name</th>
+                    <th class="uk-table-shrink">Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span><%= cart.user.name %></span>
+                    </td>
+                    <td>
+                        <span><%= cart.user.phone %></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="uk-table uk-table-middle uk-table-divider 
+                        uk-margin-remove-bottom uk-margin-remove-top">
+            <thead>
+                <tr>
+                    <th class="uk-table-expand">Description</th>
+                    <th class="uk-table-expand">Qty</th>
+                    <th class="uk-table-expand">Unit Price</th>
+                    <th class="uk-table-expand">Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var item of cart.items){ %>
+                <tr>
+                    <td>
+                        <span><%= item.title %></span>
+                    </td>
+                    <td>
+                        <span><%= item.count %></span>
+                    </td>
+                    <td>
+                        <span>$ <%= item.price %></span>
+                    </td>
+                    <td>
+                        <span>$ <%= item.total %></span>
+                    </td>
+                </tr>
+                <% } %>
+                <tr>
+                    <td colspan="3" class="cart-price-info">
+                        <span>Sub Total</span>
+                    </td>
+                    <td>
+                        <span>$ <%= cart.subTotal %></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="cart-price-info">
+                        <span>Tax @ 13%</span>
+                    </td>
+                    <td>
+                        <span>$ <%= cart.tax %> </span>
+                    </td>
+                </tr>
+                <tr id=total>
+                    <td colspan="3" class="cart-price-info">
+                        <span>Total</span>
+                    </td>
+                    <td>
+                        <span>$ <%= cart.total %></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<%- include('_layouts/footer'); -%>

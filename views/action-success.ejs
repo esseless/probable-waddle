@@ -1,0 +1,12 @@
+<%- include('_layouts/header'); -%>
+
+<main>
+    <section>
+        <% if(!isLoggedIn) { %>
+        <h3>Thank you for using the application!</h3>
+        <% } %>
+        <h2>You have successfully <%= action %>!</h2>
+    </section>
+</main>
+
+<%- include('_layouts/footer'); -%>

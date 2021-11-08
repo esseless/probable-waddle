@@ -1,0 +1,235 @@
+html {
+    margin: 0;
+    height: 99vh;
+}
+
+body {
+    margin: 0;
+    height: 97.5%;
+    overflow: auto;
+    padding: 12px 24px !important;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+.uk-h5,
+.uk-h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    display: flex;
+    flex-direction: row;
+}
+
+header a h1 {
+    margin: 4px 0 0 30px;
+}
+
+.logo {
+    height: 60px !important;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0 !important;
+}
+
+nav ul li {
+    margin: 0 24px;
+    list-style: none;
+}
+
+section {
+    text-align: center;
+}
+
+form {
+    justify-content: center;
+    align-self: center;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+}
+
+form h3 {
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+form .user-input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    max-width: 400px;
+}
+
+.cart-form .user-input input {
+    max-width: 60px;
+}
+
+.uk-card {
+    background-color: rgba(255, 255, 255, .1) !important;
+    color: rgba(255, 255, 255, .7) !important;
+    margin-bottom: 24px !important;
+}
+
+.uk-card-default .uk-card-title {
+    color: rgba(255, 255, 255, .7) !important;
+    padding-top: 12px !important;
+}
+
+.uk-card-body img {
+    height: 200px;
+    width: 155px;
+}
+
+.uk-card-small .uk-card-footer {
+    padding: 0 20px;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.user-form .user-input input {
+    margin-right: 24px !important;
+    max-width: 300px !important;
+}
+
+form label {
+    min-width: 100px;
+}
+
+.form-item {
+    min-height: 64px;
+}
+
+.error-field {
+    color: orangered;
+    font-size: 10px;
+    margin-top: 4px;
+    padding-left: 28.5%;
+}
+
+#qty-error-field {
+    padding-right: 59%;
+}
+
+#name-error-field {
+    padding-right: 15%;
+}
+
+#phone-error-field {
+    padding-right: 34%;
+}
+
+.uk-button {
+    background-color: darkgoldenrod !important;
+    border: none !important;
+    color: black !important;
+    font-weight: 700;
+}
+
+.uk-button:hover {
+    background-color: goldenrod !important;
+}
+
+.receipt-main {
+    margin: 0 18%;
+    border: 1px solid lightblue;
+    padding: 1% 1% 0 1%;
+    ;
+    text-align: center;
+}
+
+.customer-data {
+    border-bottom: 1px solid lightblue;
+}
+
+.uk-table th {
+    font-size: .5em;
+    text-align: center !important;
+    font-weight: 900 !important;
+}
+
+.uk-table tbody tr td {
+    font-size: 14px !important;
+}
+
+.cart-price-info {
+    text-align: right;
+    padding-right: 8% !important;
+}
+
+#total {
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.orders {
+    padding: 0 10%;
+}
+
+.fixed_header {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid lightblue;
+}
+
+.fixed_header tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 400px;
+}
+
+.fixed_header thead tr {
+    display: block;
+}
+
+.fixed_header th,
+.fixed_header td {
+    padding: 5px;
+    text-align: center !important;
+    width: 200px;
+}
+
+footer {
+    text-align: end;
+    font-weight: 900;
+}
+
+footer p {
+    margin-bottom: 1px !important;
+}

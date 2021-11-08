@@ -1,0 +1,54 @@
+<%- include('_layouts/header'); -%>
+<main>
+    <form id="form" action="receipt" method="POST" class="cart-form">
+        <div class="grid uk-text-center uk-grid-medium" uk-grid>
+            <% for(var juice of juices) { %>
+            <div>
+                <div class="uk-card uk-card-small uk-card-default">
+                    <h4 class="uk-card-title uk-margin-remove-bottom"><%= juice.title %></h4>
+
+                    <div class="uk-card-body">
+                        <!-- All the images have been sourced from https://unsplash.com/ -->
+                        <img src="<%= juice.image %>" alt="<%= juice.name %>">
+                        <div>
+                            <span>$ <%= juice.price %></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="user-input">
+                        <label for="<%= juice.name %>" class="uk-margin-small-right">Add to Cart</label>
+                        <span class="uk-margin-small-right cart" uk-icon="bag"></span>
+                        <input class="uk-input" type="text" value="<%= juice.count %>" name="<%= juice.name %>">
+                    </div>
+                    <span id="<%= juice.name %>-error-field" class="error-field"><%= errors[juice.name] %></span>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        <h3>Please provide your details.</h3>
+        <div class="user-form">
+            <div>
+                <div class="user-input">
+                    <label for="Name">Name:</label>
+                    <input class="uk-input" type="text" placeholder="Firstname Lastname" value="<%= user.name %>"
+                        name="name">
+                </div>
+                <span id="name-error-field" class="error-field"><%= errors.name %></span>
+            </div>
+            <div>
+                <div class="user-input">
+                    <label for="Phone">Phone:</label>
+                    <input class="uk-input" type="text" placeholder="123-123-1234" value="<%= user.phone %>"
+                        name="phone">
+                </div>
+                <span id="phone-error-field" class="error-field"><%= errors.phone %></span>
+            </div>
+        </div>
+        <div class="uk-width-1-1 uk-text-center uk-margin-remove-top uk-margin-remove-bottom checkout-button">
+            <input class="uk-button uk-button-default uk-button-large" type="submit" value="Checkout"></button>
+        </div>
+        <span class="error-field error-total uk-text-center"><%= errors.formError %></span>
+    </form>
+</main>
+<%- include('_layouts/footer'); -%>

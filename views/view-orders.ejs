@@ -1,0 +1,58 @@
+<%- include('_layouts/header'); -%>
+
+<main>
+    <div class="orders">
+        <h3>All Orders (<%= orders.length %>) </h3>
+        <table class="uk-table uk-table-middle uk-table-divider 
+                        uk-margin-remove-bottom uk-margin-remove-top fixed_header">
+            <thead>
+                <tr>
+                    <th class="uk-table-shrink">Name</th>
+                    <th class="uk-table-shrink">Phone</th>
+                    <th class="uk-table-shrink">Apple Juice</th>
+                    <th class="uk-table-shrink">Berry Juice</th>
+                    <th class="uk-table-shrink">Mango Juice</th>
+                    <th class="uk-table-shrink">Sub Total</th>
+                    <th class="uk-table-shrink">Tax</th>
+                    <th class="uk-table-shrink">Total</th>
+                    <th class="uk-table-shrink">Manage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var order of orders){ %>
+                <tr>
+                    <td>
+                        <span><%= order.name %></span>
+                    </td>
+                    <td>
+                        <span><%= order.phone %></span>
+                    </td>
+                    <td>
+                        <span>$ <%= order.appleJuices %></span>
+                    </td>
+                    <td>
+                        <span>$ <%= order.berryJuices %></span>
+                    </td>
+                    <td>
+                        <span>$ <%= order.mangoJuices %></span>
+                    </td>
+                    <td>
+                        <span>$ <%= order.subTotal %></span>
+                    </td>
+                    <td>
+                        <span>$ <%= order.tax %></span>
+                    </td>
+                    <td>
+                        <span>$ <%= order.total %></span>
+                    </td>
+                    <td>
+                        <a href="/delete/<%= order._id %>" class="uk-icon-link" uk-icon="trash"></a>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<%- include('_layouts/footer'); -%>

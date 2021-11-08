@@ -1,0 +1,30 @@
+<%- include('_layouts/header'); -%>
+
+<main>
+
+    <!-- Form container -->
+    <form id=" form" uk-grid action="login" method="POST" autocomplete="off">
+        <h3>Login</h3>
+
+        <div class="uk-width-1-1 form-item">
+            <div class="user-input">
+                <label for="username">Username:</label>
+                <input class="uk-input" type="text" name="username" value="<%= credentials.username %>">
+            </div>
+        </div>
+
+        <div class="uk-width-1-1 form-item">
+            <div class="user-input">
+                <label for="password">Password:</label>
+                <input class="uk-input" type="password" name="password" value="<%= credentials.password %>">
+            </div>
+        </div>
+
+        <div class="uk-width-1-1 uk-align-center login-button uk-text-center">
+            <input class="uk-button uk-button-default uk-button-large" type="submit" value="Login"></button>
+        </div>
+        <span id="credentials-error-field uk-text-center" class="error-field"><%= errors.credentials %></span>
+    </form>
+</main>
+
+<%- include('_layouts/footer'); -%>
