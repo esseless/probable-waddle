@@ -1,6 +1,7 @@
 // ------------------ Fill the following details -----------------------------
 // Student name: Sharanya Sargur Lakshminarasimhan
 // Student email: ssargurlakshmin2161@conestogac.on.ca
+const port = process.env.PORT || 8080
 
 const express = require('express');
 const path = require('path');
@@ -300,5 +301,5 @@ myApp.get('/setup', function (req, res) {
 
 //----------- Start the server -------------------
 
-myApp.listen(8080); // change the port only if 8080 is blocked on your system
+myApp.listen(port); // change the port only if 8080 is blocked on your system
 console.log('Server started at 8080 for mywebsite...');
